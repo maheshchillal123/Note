@@ -58,7 +58,7 @@ addButton.addEventListener('click', function () {
     firebase.database().ref('Notes/' + loggedUser.uid).push().update({
         Title:noteTitle.value,
         Description: addText.value,
-        Status:false
+        Status:"false"
     });
     addText.value = "";
     noteTitle.value="";
