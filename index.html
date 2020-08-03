@@ -9,8 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Magic Note!</title>
+    <title>Hello, world!</title>
 </head>
 
 <body>
@@ -24,8 +25,10 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form class="form-inline my-2 my-lg-0 ml-auto">
-                    <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
-                    <span class="label info" id="loginUser" style="color: white; padding: 8px; background-color: #2196F3; border-radius: 50%;"></span>
+                    <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search"
+                        aria-label="Search">
+                    <span class="label info" id="loginUser"
+                        style="color: white; padding: 8px; background-color: #2196F3; border-radius: 50%;"></span>
                 </form>
             </div>
         </nav>
@@ -39,9 +42,21 @@
                     <h5 class="card-title">Add a note</h5>
                     <div class="form-group">
                         <h6 class="card-title">Title</h6>
-                        <input type="text" class="form-control my-2" id="title"></text>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="title"></text>
+                            <div class="input-group-append">
+                                <button style="font-size:24px; border-width: 0mm;" id="titleSpeech"><i
+                                        class="fa fa-microphone"></i></button>
+                            </div>
+                        </div>
                         <h6 class="card-title">Description</h6>
-                        <textarea class="form-control" id="addText" rows="3"></textarea>
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" id="addText" rows="3"></textarea>
+                            <div class="input-group-append">
+                                <button style="font-size:24px; border-width: 0mm;" id="descriptionSpeech"><i
+                                    class="fa fa-microphone"></i></button>
+                            </div>
+                        </div>
                     </div>
                     <button class="btn btn-primary" id="addButton">Add Note</a>
                 </div>
