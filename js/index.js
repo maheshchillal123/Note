@@ -145,5 +145,29 @@ serach.addEventListener('input', function () {
         }
     });
 });
-
-
+var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 5;
+document.getElementById('titleSpeech').addEventListener('click',function () {
+    recognition.start();
+    recognition.onresult = function(event) {
+        console.log('You said: ', event.results[0][0].transcript);
+        document.getElementById('title').value=event.results[0][0].transcript;
+        recognition.onend=function (eventend) {
+            recognition.stop();
+            console.log("stooped");
+        }
+    };
+});
+document.getElementById('descriptionSpeech').addEventListener('click',function () {
+    recognition.start();
+    recognition.onresult = function(event) {
+        console.log('You said: ', event.results[0][0].transcript);
+        document.getElementById('addText').value=event.results[0][0].transcript;
+        recognition.onend=function (eventend) {
+            recognition.stop();
+            console.log("stooped");
+        }
+    };
+});
